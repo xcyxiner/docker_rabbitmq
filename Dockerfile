@@ -1,4 +1,4 @@
-FROM rabbitmq:3.6-management
+FROM rabbitmq:3.7-management
 MAINTAINER Stuart Fenton <stuart@grandmore.com>
 
 COPY rabbitmq-cluster /usr/local/bin/
