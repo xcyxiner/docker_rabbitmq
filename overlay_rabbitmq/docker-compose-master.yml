@@ -1,0 +1,24 @@
+version: '2'
+networks:
+  default:
+    external:
+      name: aaa
+services:
+ rabbit1:
+   image: grandmore/rabbitmq-cluster
+   hostname: rabbit1
+   container_name: "rabbit1"
+   mem_limit: 128m
+   environment:
+     - ERLANG_COOKIE=abcdefg
+   volumes:
+     - ./rabbit1:/var/lib/rabbitmq
+   networks:
+    default:
+     aliases:
+      - rabbit1
+   ports:
+     - "5672:5672"
+     - "15672:15672"
+     - "15670:15670"
+     - "15674:15674"
