@@ -70,7 +70,7 @@ Cluster status of node rabbit@rabbit1 ...
 * rabbit1等文件夹不能删除，删除后必须得移除原来有的节点再次添加
 
 ```
-rabbitmqctl rabbit@rabbit4
+rabbitmqctl forget_cluster_node rabbit@rabbit4
 ```
 
 
