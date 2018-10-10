@@ -1,0 +1,17 @@
+version: '2'
+networks:
+  default:
+    external:
+      name: testwifi
+services:
+ rabbit1:
+   image: rabbitmq:3-management
+   hostname: rabbit1
+   container_name: "rabbit1"
+   volumes:
+     - ./rabbit1:/var/lib/rabbitmq
+   ports:
+     - "5672:5672"
+     - "15672:15672"
+     - "15670:15670"
+     - "15674:15674"
